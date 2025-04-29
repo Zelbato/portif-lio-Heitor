@@ -14,57 +14,149 @@
 
 <body>
 
-    <header class="header">
-        <div class="container">
+    <header>
+        <div class="interface">
             <div class="logo">
                 <a href="index.html">
-                    <h1 class="title">H<span class="subtitle">z</span></h1>
+                    <!--<img src="Imagens/Logo HZ.png" alt="Image"> -->
+                    <span class="title">H<span class="span-logo">Z</span></span>
                 </a>
-            </div>
-
-            <!-- Menu Desktop -->
-            <nav class="desktop">
+            </div><!--Logo-->
+            <nav class="menu-desktop">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#sobre-mim">Sobre</a></li>
-                    <li><a href="#projetos">Meus Projetos</a></li>
-                    <li><a href="#contato">Contatos</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#sobre-mim">Sobre </a></li>
+                    <li><a href="#portifolio">Projetos</a></li>
+                    <li><a href="#contacts">Contato</a>
+                    </li>
                 </ul>
             </nav>
 
-            <!-- Botão para abrir o Menu Mobile -->
-            <div class="btn-menu">
-                <i class="bi bi-list"></i> <!-- Ícone de menu hambúrguer -->
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
             </div>
 
-            <!-- Menu Mobile -->
-            <div class="mobile">
-                <div class="btn-close">
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
                     <i class="bi bi-x-lg"></i>
-                </div>
+                </div><!--btn-fechar-->
 
                 <nav>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="#sobre-mim">Sobre</a></li>
-                        <li><a href="#projetos">Meus Projetos</a></li>
-                        <li><a href="#contato">Contatos</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#sobre-mim">Sobre Mim</a></li>
+                        <li><a href="#portifolio">Portifólio</a></li>
+                        <li><a href="#contacts">Contato</a></li>
                     </ul>
                 </nav>
-            </div>
-
-            <!-- Fundo escuro -->
-            <div class="overflow"></div>
-        </div>
+            </div><!--Menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--Interface-->
     </header>
+
+    <br><br><br><br><br>
 
     <main class="main">
         <section class="topo">
-            <div class="container">
-                <div class="flex">
-                    <!-- Conteúdo do topo -->
+            <!-- Conteúdo do topo -->
+            <div class="animation-text">
+                <h2>Olá eu sou <br>
+                    <span>Heitor Zelbato</span> <br>
+                    Desenvolvedor Front-End
+                </h2>
+            </div>
+        </section>
+
+
+        <section class="sobre global" id="sobre-mim">
+            <div class="interface">
+                <h2>Sobre Mim</h2>
+                <div class="texto-sobre">
+                    <p>Meu nome é Heitor, tenho 18 anos. Busco uma vaga de estágio ou emprego focado no
+                        desenvolvimento de software.
+
+                        Comecei a estudar programação em 2022,estive melhorando meu front-end durante alguns anos e
+                        decidi não focar apenas no visial, então começei minha jornada no back-end utilizando a
+                        linguagem PHP, para a realização projetos em full-stack.</p>
                 </div>
             </div>
+        </section>
+
+
+        <section class="projeto global" id="portifolio">
+            <div class="interface">
+                <h2>Habilidades</h2>
+                <div class="card-content">
+                    <div class="wrapper">
+                        <div class="box-content">
+                            <div class="box">
+                                <img src="assets/img/Teste-Vocacional.png" alt="projeto-1">
+                                <div class="overlay">
+                                    <h3>Teste Vocacional</h3>
+                                    <a href="https://github.com/Zelbato/Teste-Vocacional">Acessar Projeto</a>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="assets/img/calculadora-js.png" alt="projeto-2">
+                                <div class="overlay">
+                                    <h3>Calculadora</h3>
+                                    <a href="https://github.com/Zelbato/Calculadora">Acessar Projeto</a>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="assets/img/quiz-programacao.png" alt="projeto-3">
+                                <div class="overlay">
+                                    <h3>Quiz Programação</h3>
+                                    <a href="https://github.com/Zelbato/Quiz-Programacao">Acessar Projeto</a>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="assets/img/clone-tailwind.png" alt="projeto-4">
+                                <div class="overlay">
+                                    <h3>Clone com Tailwindcss</h3>
+                                    <a href="https://github.com/Zelbato/Clone-Facebook-Tailwindcss">Acessar Projeto</a>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="assets/img/repositorio-de-musica.png" alt="projeto-5">
+                                <div class="overlay">
+                                    <h3>Repositório de Musica</h3>
+                                    <a href="https://github.com/Zelbato/PlayList-Music">Acessar Projeto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato global" id="contacts">
+            <div class="interface">
+                <h2>Contatos</h2>
+            </div>
+            <div class="form-container">
+                <form class="form-box" action="">
+
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5"
+                            placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+
         </section>
     </main>
 

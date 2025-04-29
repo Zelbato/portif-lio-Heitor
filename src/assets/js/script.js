@@ -1,20 +1,52 @@
 
-const btnClose = document.querySelector('.btn-close');
-const mobileMenu = document.querySelector('.mobile');
-const overflow = document.querySelector('.overflow');
+let btnMenu = document.getElementById('btn-menu')
+let menu = document.getElementById('menu-mobile')
+let overlay = document.getElementById('overlay-menu')
 
-// Abre o menu ao clicar no ícone de hambúrguer
-const openMenu = () => {
-    mobileMenu.classList.add('open');
-    overflow.classList.add('show');
-};
+btnMenu.addEventListener('click', () => {
+    menu.classList.add("abrir-menu")
+})
 
-// Fecha o menu ao clicar no botão de fechar ou no fundo escuro
-const closeMenu = () => {
-    mobileMenu.classList.remove('open');
-    overflow.classList.remove('show');
-};
+menu.addEventListener('click', () => {
+    menu.classList.remove("abrir-menu")
+})
 
-// Evento para fechar o menu
-btnClose.addEventListener('click', closeMenu);
-overflow.addEventListener('click', closeMenu);
+overlay.addEventListener('click', () => {
+    menu.classList.remove("abrir-menu")
+})
+
+const chk = document.getElementById('checkbox')
+
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('white')
+})
+
+
+
+const initAnimationScroll = () => {
+    const sections = document.querySelectorAll('.global')
+
+    const windowHalfSize = window.innerHeight * 0.6
+
+    const animateScroll = () => {
+        sections.forEach(item => {
+            const sectionTop = item.getBoundingClientRect().top
+
+            const isSectionVisible = (sectionTop - windowHalfSize) < 0
+
+            if (isSectionVisible) {
+                item.classList.add('active')
+            } else {
+                item.classList.remove('active')
+            }
+
+        })
+    }
+
+    animateScroll()
+
+    window.addEventListener('scroll', animateScroll)
+
+}
+
+initAnimationScroll()
